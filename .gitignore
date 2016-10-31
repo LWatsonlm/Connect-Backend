@@ -15,3 +15,8 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore application configuration
+/config/application.yml
+
+API-key: 777s3empri559m
