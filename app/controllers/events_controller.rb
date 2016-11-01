@@ -8,6 +8,9 @@ end
 
 def show
   @event = Event.find(params[:id])
+  @attendees = @event.users
+
+  render json: @event, include: :attendances
 end
 
 def new
