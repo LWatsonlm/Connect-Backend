@@ -3,10 +3,7 @@ class EventsController < ApplicationController
 def index
   @events = Event.all
 
-  respond_to do |format|
-    format.html {render :events}
-    format.json {render json: @events}
-  end
+  render json: @events
 end
 
 def show
@@ -19,8 +16,6 @@ end
 
 def create
   @event = Event.create(event_params)
-
-redirect_to event_path(@event)
 end
 
 def edit
