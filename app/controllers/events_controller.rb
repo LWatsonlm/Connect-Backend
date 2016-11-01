@@ -15,7 +15,9 @@ def new
 end
 
 def create
-  @event = Event.create(event_params)
+  @event = Event.create!(event_params)
+  render json: @event
+
 end
 
 def edit
