@@ -33,7 +33,7 @@ end
 
 def update
   @event = Event.find(params[:id])
-  @event.update(event_params)
+  @event.update!(event_params)
 
   render json: @event
 end
