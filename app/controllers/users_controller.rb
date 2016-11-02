@@ -8,7 +8,6 @@ end
 
 def show
   @user = User.find(params[:id])
-  @attendees = @user.users
 
   render json: @user
 end
