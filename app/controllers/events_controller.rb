@@ -9,8 +9,12 @@ end
 def show
   @event = Event.find(params[:id])
   @attendees = @event.users
+  data = {
+    event: @event,
+    attendees: @attendees
+  }
 
-  render json: @event, include: :attendances
+  render json: data
 end
 
 def new
@@ -31,7 +35,7 @@ def update
   @event = Event.find(params[:id])
   @event.update(event_params)
 
-  redirect_to event_path(@event)
+  render json: @event
 end
 
 def destroy
