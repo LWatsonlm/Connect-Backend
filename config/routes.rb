@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users
+  get 'decode/:id', to: 'event#decode'
 end

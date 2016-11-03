@@ -24,7 +24,7 @@ end
 
 private
 def user_params
-  params.require(:user).permit(:title, :code, :location, :time, :cost, :date)
+  params.require(:user).permit(:name, :photo_url, :linkedin_url )
 end
 
 

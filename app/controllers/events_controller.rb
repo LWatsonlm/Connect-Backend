@@ -51,6 +51,12 @@ def destroy
   redirect_to events_path
 end
 
+def decode
+  @event = Event.find_by(code: params[:id])
+
+  render json: @event
+end
+
 # strong params
 private
 def event_params
