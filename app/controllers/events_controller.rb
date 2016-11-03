@@ -33,9 +33,15 @@ end
 
 def update
   @event = Event.find(params[:id])
-  @event.update(event_params)
+  @attendees = @event.users
+  @event.update!(event_params)
+  data = {
+    event: @event,
+    attendees: @attendees
+  }
+  puts data
 
-  render json: @event
+  render json: data
 end
 
 def destroy
@@ -43,6 +49,12 @@ def destroy
   @event.destroy
 
   redirect_to events_path
+end
+
+def decode
+  @event = Event.find_by(code: params[:id])
+
+  render json: @event
 end
 
 # strong params

@@ -8,9 +8,18 @@
 User.destroy_all
 Event.destroy_all
 
+<<<<<<< HEAD
 Lesbians = Event.create!({title: 'Lesbians Who Tech Meetup', code: 'lez connect', location: 'Phase 1', time: '8.00', cost: '5.00', date: '11/4/2016'})
 CivicHacknight = Event.create!({title: 'Civic Hacknight', code: 'civicHack', location: 'Social Tables', time: '8.00', cost: '3.00', date: '11/3/2016'})
 RailsBeginnersNight = Event.create!({title: 'Ruby on Rails: Beginners Night!', code: 'rubyBigginer', location: 'The Iron Yard', time: '8.00', cost: '2.00', date: '11/4/2016'})
+=======
+User.destroy_all
+Event.destroy_all
+
+Lesbians = Event.create!({title: 'Lesbians Who Tech Meetup', code: 'lez connect', location: 'Phase 1', time: '8.00', cost: '5.00', date: '11/4/2016'})
+CivicHacknight = Event.create!({title: 'Civic Hacknight', code: 'civicHack', location: 'Social Tables', time: '8.00', cost: '3.00', date: '11/3/2016'})
+RailsBeginnersNight = Event.create!({title: 'Ruby on Rails: Beginners Night', code: 'rubyBigginer', location: 'The Iron Yard', time: '8.00', cost: '2.00', date: '11/4/2016'})
+>>>>>>> 9f2166d5ca1d5c902e16de17089ee9f4f42ef4d2
 IntroToCodeWorkshop = Event.create!({title: 'Intro To Code Workshop', code: 'codeIntro', location: 'Greensboro', time: '8.00', cost: '3.00', date: '11/5/2016'})
 Learn2CodeWorkshopJavaScript101 = Event.create!({title: 'Learn to Code Workshop: JavaScript 101', code: 'codeWorkshop', location: 'Tysons', time: '8.00', cost: '5.00', date: '11/6/2016'})
 TechnicalInterviews = Event.create!({title: '"Technical Interviews"', code: 'techInterviews', location: 'WeddingWire', time: '8.00', cost: '2.00', date: '11/4/2016'})
@@ -18,7 +27,10 @@ InteractiveMapsWithPythonAndJavaScript = Event.create!({title: 'Interactive Maps
 Code4ProgressHacknight = Event.create!({title: 'Code for Progress Hacknight', code: 'code4Progress', location: 'ConnecticutAve', time: '6.30', cost: '2.00', date: '11/13/2016'})
 CaBiHackNightVI  = Event.create!({title: 'CaBi Hack Night VI ', code: 'cabiHack', location: 'WeWorkCrystalCity', time: '7.30', cost: '4.00', date: '11/11/2016'})
 FreeCrashCourseIntro2Ruby  = Event.create!({title: 'Free Crash Course Intro 2 Ruby', code: 'introCourse', location: 'The Iron Yard', time: '6.30', cost: '3.00', date: '11/10/2016'})
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9f2166d5ca1d5c902e16de17089ee9f4f42ef4d2
 Latoya = User.create!({name: 'Latoya Watson', photo_url: 'https://media.licdn.com/media/AAEAAQAAAAAAAAkNAAAAJDUxMWZkMDNiLWQ0YTctNDJkMC04NjljLWMyYTk3YjlhMGE0Mw.jpg', linkedin_url: 'https://www.linkedin.com/in/watsonlm'})
 Liza = User.create!({name: 'Liza Floyd', photo_url: 'https://media.licdn.com/media/AAEAAQAAAAAAAAjpAAAAJGRiMmViYjcwLWMyODYtNGIzZS04MDEyLTIzYWI2OTFlYzJjMA.jpg', linkedin_url: 'https://www.linkedin.com/in/lizafloyd'})
 Andres = User.create!({name: 'Andres Espinoza', photo_url: 'https://media.licdn.com/media/AAEAAQAAAAAAAAkNAAAAJDUxMWZkMDNiLWQ0YTctNDJkMC04NjljLWMyYTk3YjlhMGE0Mw.jpg', linkedin_url: 'https://www.linkedin.com/in/andres-espinoza'})
@@ -29,3 +41,46 @@ Michael = User.create!({name: 'Michael Lai', photo_url: 'https://media.licdn.com
 Adrian = User.create!({name: 'Adrian Maseda', photo_url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAJPAAAAJGI2NjIxYTBmLTYzZDctNDhhMC05ODFhLTZhMGUzZjgwZTMxZQ.jpg', linkedin_url: 'https://www.linkedin.com/in/adrianmaseda'})
 Jesse = User.create!({name: 'Jesse Shawl', photo_url: 'https://media.licdn.com/media/AAEAAQAAAAAAAAfSAAAAJDczNzQ5OGExLWU4YjQtNDlmNC1hZjRhLWRlZGNjNGM2ZDAyOQ.jpg', linkedin_url: 'https://www.linkedin.com/in/jesse-shawl-0a517361'})
 Nick = User.create!({name: 'Latoya Watson', photo_url: 'https://media.licdn.com/media/AAEAAQAAAAAAAAkNAAAAJDUxMWZkMDNiLWQ0YTctNDJkMC04NjljLWMyYTk3YjlhMGE0Mw.jpg', linkedin_url: 'https://www.linkedin.com/in/watsonlm'})
+<<<<<<< HEAD
+=======
+Liza.attendances.create!(event:RailsBeginnersNight)
+Liza.attendances.create!(event:CaBiHackNightVI)
+Liza.attendances.create!(event:CivicHacknight)
+Liza.attendances.create!(event:IntroToCodeWorkshop)
+Andres.attendances.create!(event:RailsBeginnersNight)
+Andres.attendances.create!(event:CaBiHackNightVI)
+Andres.attendances.create!(event:CivicHacknight)
+Andres.attendances.create!(event:IntroToCodeWorkshop)
+Latoya.attendances.create!(event:RailsBeginnersNight)
+Latoya.attendances.create!(event:CaBiHackNightVI)
+Latoya.attendances.create!(event:CivicHacknight)
+Latoya.attendances.create!(event:IntroToCodeWorkshop)
+Mike.attendances.create!(event:RailsBeginnersNight)
+Mike.attendances.create!(event:CaBiHackNightVI)
+Mike.attendances.create!(event:CivicHacknight)
+Mike.attendances.create!(event:IntroToCodeWorkshop)
+Kevin.attendances.create!(event:RailsBeginnersNight)
+Kevin.attendances.create!(event:CaBiHackNightVI)
+Kevin.attendances.create!(event:CivicHacknight)
+Kevin.attendances.create!(event:IntroToCodeWorkshop)
+Andy.attendances.create!(event:RailsBeginnersNight)
+Andy.attendances.create!(event:CaBiHackNightVI)
+Andy.attendances.create!(event:CivicHacknight)
+Andy.attendances.create!(event:IntroToCodeWorkshop)
+Michael.attendances.create!(event:RailsBeginnersNight)
+Michael.attendances.create!(event:CaBiHackNightVI)
+Michael.attendances.create!(event:CivicHacknight)
+Michael.attendances.create!(event:IntroToCodeWorkshop)
+Adrian.attendances.create!(event:RailsBeginnersNight)
+Adrian.attendances.create!(event:CaBiHackNightVI)
+Adrian.attendances.create!(event:CivicHacknight)
+Adrian.attendances.create!(event:IntroToCodeWorkshop)
+Jesse.attendances.create!(event:RailsBeginnersNight)
+Jesse.attendances.create!(event:CaBiHackNightVI)
+Jesse.attendances.create!(event:CivicHacknight)
+Jesse.attendances.create!(event:IntroToCodeWorkshop)
+Nick.attendances.create!(event:RailsBeginnersNight)
+Nick.attendances.create!(event:CaBiHackNightVI)
+Nick.attendances.create!(event:CivicHacknight)
+Nick.attendances.create!(event:IntroToCodeWorkshop)
+>>>>>>> 9f2166d5ca1d5c902e16de17089ee9f4f42ef4d2
