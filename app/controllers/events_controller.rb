@@ -57,6 +57,10 @@ def decode
   render json: @event
 end
 
+def pizza
+
+end
+
 # strong params
 private
 def event_params
