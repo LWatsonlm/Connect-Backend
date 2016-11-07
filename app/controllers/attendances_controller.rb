@@ -40,16 +40,16 @@ def destroy
   redirect_to attendances_path
 end
 
-def decode
-  @attendance = Attendance.find_by(code: params[:id])
-
-  render json: @attendance
-end
+# def decode
+#   @attendance = Attendance.find_by(code: params[:id])
+#
+#   render json: @attendance
+# end
 
 # strong params
 private
 def attendance_params
-  params.require(:attendance).permit(:title, :code, :location, :time, :cost, :date)
+  params.require(:attendance).permit(:user_id, :event_id)
 end
 
 end
