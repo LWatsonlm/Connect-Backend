@@ -46,10 +46,14 @@ end
 #   render json: @attendance
 # end
 
+def checkin
+  @attendance = Attendance.create!(attendance_params)
+  render json: @attendance
+end
 # strong params
 private
 def attendance_params
-  params.require(:attendance).permit(:user_id, :event_id)
+  params.require(:attendance).permit(:user, :event)
 end
 
 end
