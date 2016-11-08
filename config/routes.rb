@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users
   resources :attendances
 
-  get '/attendances/checkin/:user/:event' => 'attendances#checkin'
+  post '/attendances/checkin/:user/:event' => 'attendances#create'
 end

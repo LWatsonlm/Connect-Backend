@@ -11,7 +11,9 @@ def new
 end
 
 def create
-  @attendance = Attendance.create!(attendance_params)
+  @event = Event.find_by(code: params[:event])
+  @user = User.find_by(name: params[:user])
+  @attendance = Attendance.create!(event: @event, user: @user)
   render json: @attendance
 
 end
@@ -46,14 +48,14 @@ end
 #   render json: @attendance
 # end
 
-def checkin
-  @attendance = Attendance.create!(attendance_params)
-  render json: @attendance
-end
+# def checkin
+#   @attendance = Attendance.create!(attendance_params)
+#   render json: @attendance
+# end
 # strong params
 private
 def attendance_params
-  params.require(:attendance).permit(:user, :event)
+  params.require(:attendance).permit(:user_id, :event_id)
 end
 
 end
