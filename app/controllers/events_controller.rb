@@ -14,7 +14,8 @@ def show
     attendees: @attendees
   }
 
-  render json: data
+  render json: data  # AM: I wonder if you could've used `include:` to pass attendee information in your JSON response for an event
+                     # AM: I only bring this up because I recall there being an issue processing data on the front-end because you were sending back this custom `data` object
 end
 
 def new
@@ -41,21 +42,22 @@ def update
   }
   puts data
 
-  render json: data
+  render json: data   # AM: See my note above about using Rails `include:`
 end
 
 def destroy
   @event = Event.find(params[:id])
   @event.destroy
 
-  redirect_to events_path
+  redirect_to events_path   # AM: Since your Rails API is serving up views, do you need to redirect?
+                            # AM: Is there anything helpful you could send back instead in a JSON response (e.g., confirmation of deletion)?
 end
 
 def decode
   @event = Event.find_by(code: params[:id])
 
   render json: @event
-end
+end   # AM: Do you end up using this? How do you trigger it?
 
 # strong params
 private
