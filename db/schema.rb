@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20161031153420) do
     t.string   "linkedin_url"
     t.boolean  "hiring"
     t.boolean  "looking"
-    t.string   "skills"
+    t.string   "skills"           # AM: Is this a list of skills? It may be easier to access / parse through them if Skill is its own model.
     t.string   "desired_skills"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
