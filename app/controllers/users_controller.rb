@@ -22,9 +22,15 @@ def create
 
 end
 
+def id
+  @user = User.find_by(linkedinId: params[:linkedinId])
+
+  render json: @user
+end
+
 private
 def user_params
-  params.require(:user).permit(:name, :photo_url, :linkedin_url )
+  params.require(:user).permit(:name, :photo_url, :linkedin_url, :lastName, :linkedinId )
 end
 
 
