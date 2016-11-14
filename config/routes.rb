@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :attendances
 
   post '/attendances/checkin/:user/:event' => 'attendances#create'
+  get '/users/id/:linkedinId' => "users#id"
 end
