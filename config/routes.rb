@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   post '/attendances/checkin/:user/:event' => 'attendances#create'
   get '/users/id/:linkedinId' => "users#id"
-  get '/' => "users#key"
+  root "users#get_user"
+  post '/code/' => "users#get_code"
+  get '/code' => "users#get_code"
 end
