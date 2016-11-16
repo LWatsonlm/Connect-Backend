@@ -28,6 +28,12 @@ def id
   render json: @user
 end
 
+def key
+  @key = ENV['API_KEY']
+
+  render json: @key
+end
+
 private
 def user_params
   params.require(:user).permit(:name, :photo_url, :linkedin_url, :lastName, :linkedinId )
