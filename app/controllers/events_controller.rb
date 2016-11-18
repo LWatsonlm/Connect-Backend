@@ -51,7 +51,6 @@ def destroy
   redirect_to events_path
 end
 
-# strong params
 private
 def event_params
   params.require(:event).permit(:title, :code, :location, :time, :cost, :date)
