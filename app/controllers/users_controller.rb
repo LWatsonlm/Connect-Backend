@@ -35,6 +35,7 @@ end
 # end
 
 def get_user
+
   @url = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=#{ENV['API_KEY']}&redirect_uri=
 https://connect-f6bd3.firebaseapp.com/&state=987654321&scope=r_basicprofile"
 
@@ -44,8 +45,10 @@ end
 def get_code
   @code = params[:code]
   # using the cod eand the api key to make the request
+
   @postUrl = "https://www.linkedin.com/oauth/v2/accessToken?grant_type=authorization_code&code=#{@code}&redirect_uri=
 https://connect-f6bd3.firebaseapp.com/&client_id=#{ENV['API_KEY']}&client_secret=#{ENV['client_secret']}"
+
   # send user data back as json
   response = HTTParty.post(@postUrl)
   token = response["access_token"]
