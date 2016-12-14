@@ -2,6 +2,9 @@
 
 This repository is the Rails API of a two-part networking event attendance management application using the LinkedIn API, Connect+.
 
+Connect+ was built to be a Networking Event Attendance Management system where event owners can create events using a secret code, share it with attendees and attendees can check-in, view other attendees at the event and easily connect with them on Linkedin - all in one place.
+
+
 ##Technologies Used
 Connect+ uses a PostgreSQL database. We accessed its Ruby on Rails API through Active Record, to return JSON to the front end. The front end is handled by AngularJS. Connect+'s API is hosted by Heroku, and the front end is on FireBase. The application accesses the LinkedIn API through oAuth 2.0.
 
@@ -10,6 +13,7 @@ The application requires two repositories. Please also make note of the front en
 https://github.com/a-espinoza/ng_tatiana.
 
 For this repo, please install dependencies using ```npm install```.  For the API, install dependencies using ```bundle install```.
+
 
 ##User Stories
 * As an event owner, I should be able to create, read, update, and destroy my events.
